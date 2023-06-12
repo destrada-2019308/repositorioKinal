@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="750.0" prefWidth="1280.0" style="-fx-background-color: #eee2cb;" stylesheets="@../resource/TonysKinal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegoestrada.controller.EmpleadoController">
+   <children>
+      <AnchorPane layoutX="-16.0" prefHeight="750.0" prefWidth="390.0" style="-fx-background-color: #f8ca80;">
+         <children>
+            <Pane layoutX="88.0" layoutY="14.0" prefHeight="203.0" prefWidth="230.0" style="-fx-background-color: #c84e28; -fx-background-radius: 100 100 10 10;">
+               <children>
+                  <ImageView fitHeight="143.0" fitWidth="145.0" layoutX="44.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/empleado.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="59.0" layoutY="21.0" text="Empleado" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox layoutX="45.0" layoutY="244.0" prefHeight="421.0" prefWidth="316.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="TOP_CENTER" cache="true" graphicTextGap="20.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#nuevo" prefHeight="72.0" prefWidth="322.0" styleClass="button1" text="Nuevo" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" accessibleRole="BUTTON" blendMode="SRC_ATOP" fitHeight="70.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/agregar-archivo.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="SW_RESIZE" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Line endX="209.58578491210938" endY="16.185762405395508" startX="-100.0" stroke="#f8ca80" strokeType="OUTSIDE" strokeWidth="2.0" style="-fx-blend-mode: #eee2cb;" />
+                  <Button fx:id="btnEliminar" alignment="TOP_CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="56.0" prefWidth="315.0" styleClass="button1" text="Eliminar" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" accessibleRole="BUTTON" blendMode="SRC_ATOP" fitHeight="70.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/boton-eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Line endX="140.0928955078125" endY="16.185762405395508" startX="-100.0" stroke="#f8ca80" strokeType="OUTSIDE" strokeWidth="2.0" style="-fx-blend-mode: #eee2cb;" />
+                  <Button fx:id="btnEditar" alignment="TOP_CENTER" graphicTextGap="15.0" mnemonicParsing="false" onAction="#editar" prefHeight="56.0" prefWidth="313.0" styleClass="button1" text="Editar" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="70.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/editar.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Line endX="140.0928955078125" endY="16.185762405395508" startX="-100.0" stroke="#f8ca80" strokeType="OUTSIDE" strokeWidth="2.0" style="-fx-blend-mode: #eee2cb;" />
+                  <Button fx:id="btnReporte" alignment="TOP_CENTER" graphicTextGap="0.0" layoutX="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#reporte" prefHeight="56.0" prefWidth="312.0" snapToPixel="false" styleClass="button1" text="Reporte" textAlignment="JUSTIFY" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="70.0" fitWidth="94.0" layoutX="-110.0" pickOnBounds="true" preserveRatio="true" x="200.0">
+                           <image>
+                              <Image url="@../image/reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView cache="true" fitHeight="39.0" fitWidth="42.0" layoutX="31.0" layoutY="14.0" onMouseClicked="#ventanaTipoEmpleado" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
+               <image>
+                  <Image url="@../image/flechaatras.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <HBox layoutX="-36.0" layoutY="127.0" prefHeight="100.0" prefWidth="200.0" />
+            <ImageView fitHeight="71.0" fitWidth="81.0" layoutX="70.0" layoutY="665.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Menu.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="374.0" layoutY="64.0" prefHeight="166.0" prefWidth="907.0" style="-fx-background-color: #f6cd96;">
+         <children>
+            <Label layoutX="14.0" layoutY="25.0" prefHeight="23.0" prefWidth="423.0" text="Administración/Control/Coder" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbFecha" ellipsisString="" layoutX="24.0" layoutY="56.0" prefHeight="71.0" prefWidth="502.0" text="Hoy es dia de mes de año" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="396.0" layoutY="41.0" prefHeight="23.0" prefWidth="220.0" text="Fundación Kinal ">
+         <font>
+            <Font name="Arial Narrow Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="412.0" layoutY="247.0" prefHeight="134.0" prefWidth="843.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="416.0" minWidth="10.0" prefWidth="230.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="714.0" minWidth="10.0" prefWidth="189.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="714.0" minWidth="10.0" prefWidth="271.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="714.0" minWidth="10.0" prefWidth="153.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Código Empleado" textFill="#572512">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="224.0" text=" Número Empelado" textFill="#572512" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="245.0" text=" Apellidos Empleado" textFill="#572512" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="218.0" text="Nombre Empelado" textFill="#572512" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="224.0" text="Dirección Empelado" textFill="#572512" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="224.0" text=" Teléfono Contacto" textFill="#572512" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="224.0" text="Grado Cocinero" textFill="#572512" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="269.0" text=" Código Tipo Empleado" textFill="#572512" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoEmpleado" editable="false" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="1" />
+            <ComboBox fx:id="cmbCodigoTipoEmpleado" prefHeight="25.0" prefWidth="205.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextField fx:id="txtTelefonoEmpleado" editable="false" prefHeight="30.0" prefWidth="215.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="txtApellidosEmpleado" editable="false" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="txtDireccionEmpleado" editable="false" prefHeight="30.0" prefWidth="215.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtNombreEmpleado" editable="false" prefHeight="30.0" prefWidth="215.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtNumeroEmpleado" editable="false" prefHeight="30.0" prefWidth="215.0" GridPane.columnIndex="3" />
+            <TextField fx:id="txtGradoCocinero" editable="false" prefHeight="30.0" prefWidth="215.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblEmpleados" layoutX="403.0" layoutY="398.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="325.0" prefWidth="861.0">
+        <columns>
+          <TableColumn fx:id="colCodigoEmpleado" prefWidth="107.0" text="Código Empleado" />
+          <TableColumn fx:id="colNumeroEmpleado" prefWidth="111.0" text="Número Empleado" />
+            <TableColumn fx:id="colNombresEmpleado" minWidth="0.0" prefWidth="93.0" text="Nombres" />
+            <TableColumn fx:id="colApellidosEmpleado" prefWidth="74.0" text="Apellidos" />
+            <TableColumn fx:id="colDireccionEmpleado" prefWidth="124.0" text="Dirección" />
+            <TableColumn fx:id="colTelefonoEmpleado" prefWidth="109.0" text="Teléfono" />
+            <TableColumn fx:id="colGradoCocinero" prefWidth="106.0" text="Grado Cocinero" />
+            <TableColumn fx:id="colCodigoTipoEmpleado" prefWidth="136.0" text="Código Tipo Empleado" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="750.0" prefWidth="1280.0" style="-fx-background-color: #eee2cb;" stylesheets="@../resource/TonysKinal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegoestrada.controller.UsuarioController">
+   <children>
+      <AnchorPane layoutX="-7.0" prefHeight="750.0" prefWidth="391.0" style="-fx-background-color: #f8ca80;">
+         <children>
+            <Pane layoutX="80.0" layoutY="14.0" prefHeight="203.0" prefWidth="230.0" style="-fx-background-color: #c84e28; -fx-background-radius: 100 100 10 10;">
+               <children>
+                  <ImageView fitHeight="142.0" fitWidth="134.0" layoutX="48.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/usuario.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="71.0" layoutY="23.0" text="Plantilla" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox layoutX="38.0" layoutY="323.0" prefHeight="246.0" prefWidth="316.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="TOP_CENTER" cache="true" graphicTextGap="20.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#nuevo" prefHeight="72.0" prefWidth="322.0" styleClass="button1" text="Nuevo" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" accessibleRole="BUTTON" blendMode="SRC_ATOP" fitHeight="70.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/agregar-archivo.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="SW_RESIZE" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Line endX="209.58578491210938" endY="16.185762405395508" startX="-100.0" stroke="#f8ca80" strokeType="OUTSIDE" strokeWidth="2.0" style="-fx-blend-mode: #eee2cb;" />
+                  <Button fx:id="btnEliminar" alignment="TOP_CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#reporte" prefHeight="56.0" prefWidth="315.0" styleClass="button1" text="Eliminar" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" accessibleRole="BUTTON" blendMode="SRC_ATOP" fitHeight="70.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/boton-eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Line endX="140.0928955078125" endY="16.185762405395508" startX="-100.0" stroke="#f8ca80" strokeType="OUTSIDE" strokeWidth="2.0" style="-fx-blend-mode: #eee2cb;" />
+                  <Line endX="140.0928955078125" endY="16.185762405395508" startX="-100.0" stroke="#f8ca80" strokeType="OUTSIDE" strokeWidth="2.0" style="-fx-blend-mode: #eee2cb;" />
+               </children>
+            </VBox>
+            <ImageView cache="true" fitHeight="39.0" fitWidth="42.0" layoutX="19.0" layoutY="14.0" onMouseClicked="#login" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
+               <image>
+                  <Image url="@../image/flechaatras.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <HBox layoutX="-36.0" layoutY="127.0" prefHeight="100.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="384.0" layoutY="64.0" prefHeight="166.0" prefWidth="898.0" style="-fx-background-color: #f6cd96;">
+         <children>
+            <Label layoutX="14.0" layoutY="25.0" prefHeight="23.0" prefWidth="423.0" text="Administración/Control/Coder" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFecha" ellipsisString="" layoutX="24.0" layoutY="56.0" prefHeight="71.0" prefWidth="502.0" text="Hoy es dia de mes de año" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="396.0" layoutY="41.0" prefHeight="23.0" prefWidth="220.0" text="Fundación Kinal ">
+         <font>
+            <Font name="Arial Narrow Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="496.0" layoutY="266.0" prefHeight="348.0" prefWidth="675.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="3.0" prefWidth="245.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Apellido Usuario" textFill="#572512" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+            <Label text="Nombre Usuario" textFill="#572512" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+            <Label text="Código Usuario" textFill="#572512">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+            <Label text="Usuario" textFill="#572512" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+            <Label text="Contraseña" textFill="#572512" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoUsuario" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNombreUsuario" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtApellidoUsuario" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtUsuario" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtPassword" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

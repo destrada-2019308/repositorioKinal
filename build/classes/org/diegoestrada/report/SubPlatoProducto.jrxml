@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubPlatoProducto" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="11c152fd-e8d3-4073-af1a-004bafac42a5">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codEmpresa" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select P.precioPlato, P.nombrePlato, PR.nombreProducto
+				from Empresas E
+					inner join Servicios S
+						on E.codigoEmpresa = S.codigoEmpresa
+							inner join Servicios_has_Platos SP
+								on S.codigoServicio = SP.codigoServicio
+									inner join Platos P
+										on SP.codigoPlato = P.codigoPlato
+					inner join Productos_has_Platos PP
+						on P.codigoPlato = PP.codigoPlato
+							inner join Productos PR
+								on PP.codigoProducto = PR.codigoProducto
+			where E.codigoEmpresa = $P{codEmpresa} group by(S.codigoServicio);]]>
+	</queryString>
+	<field name="precioPlato" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="111" y="0" width="86" height="20" uuid="2ef0c551-c438-4210-affe-ff435e18a136"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{precioPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="101" height="20" uuid="8629ef20-efce-48fa-ade7-6bd7db7cdfce"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombrePlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="208" y="1" width="208" height="20" uuid="9e0df14e-19e0-46da-b797-257eb1f76990"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

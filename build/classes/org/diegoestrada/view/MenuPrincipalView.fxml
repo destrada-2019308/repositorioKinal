@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="663.0" stylesheets="@../resource/TonysKinal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegoestrada.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="670.0" fitWidth="826.0" layoutX="-7.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Logo.png" />
+         </image>
+      </ImageView>
+      <MenuBar centerShape="false" prefHeight="58.0" prefWidth="490.0">
+        <menus>
+          <Menu id="Módulos" mnemonicParsing="false" text="Módulos">
+            <items>
+              <MenuItem id="Empresa" mnemonicParsing="false" onAction="#ventanaEmpresa" text="Empresas" />
+                  <MenuItem id="Producto" mnemonicParsing="false" onAction="#ventanaProducto" text="Productos" />
+                  <MenuItem id="Tipo Empleado" mnemonicParsing="false" onAction="#ventanaTipoEmpleado" text="Tipo Empleado" />
+                  <MenuItem id="Tipo Plato" mnemonicParsing="false" onAction="#ventanaTipoPlato" text="Tipo Plato" />
+            </items>
+          </Menu>
+            <Menu id="Has" mnemonicParsing="false" text="Tablas de unión">
+               <items>
+                  <MenuItem id="Producto has Platos" mnemonicParsing="false" onAction="#ventanaProductoshasPlatos" text="Producto has Platos" />
+                  <MenuItem id="Servicios has platos" mnemonicParsing="false" onAction="#ventanaServiciosHasPlatos" text="Servicios has Platos" />
+                  <MenuItem id="Servicios has Empleados" mnemonicParsing="false" onAction="#ventanaServiciosHasEmpleados" text="Servicios has Empleados" />
+               </items>
+            </Menu>
+          <Menu id="Reportes" mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem id="ReporteEmpresa" mnemonicParsing="false" text="Reporte Producto" />
+            </items>
+          </Menu>
+          <Menu id="?" mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem id="Programador" mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="52.0" fitWidth="53.0" layoutX="597.0" layoutY="608.0" onMouseClicked="#login" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/salida.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

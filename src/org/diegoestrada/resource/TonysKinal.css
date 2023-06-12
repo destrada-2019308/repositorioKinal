@@ -1,0 +1,110 @@
+.menu-bar {
+    -fx-background-color:  #572512    ;
+    -fx-opacity: 0.5;
+    -fx-border-width: 2.0;
+
+}
+.menu-bar .label {
+    -fx-font-size: 20.0 pt;
+    -fx-font-family: "Segoe UI Semilight";
+    -fx-text-fill: white;
+    -fx-font-weight: bold; 
+    -fx-padding: 10.0px;
+
+}
+.menu-bar .menu-button:hover, .menu-bar .menu-button:focused, .menu-bar .menu-button:showing {
+    -fx-background: #c84e28  ;
+    -fx-opacity: 0.8;
+    -fx-text-fill: black;
+}
+
+.menu-item {
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+    -fx-text-fill: black;
+    -fx-background: darkgray ;
+}
+.menu-item .label{
+    -fx-font-size: 16.0 pt;
+    -fx-text-fill: black;
+}
+.menu-item .label:hover{
+    -fx-font-size: 20.0 pt;
+    -fx-background: black ;
+    -fx-text-fill: white;
+}
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color:white ;
+    -fx-border-width: 0.2px;
+    -fx-border-color: black;
+    /** -fx-background-insets: 0.0, 1.0, 2.0;
+    -fx-background-radius: 0.0 6.0 6.0 6.0, 0.0 5.0 5.0 5.0, 0.0 4.0 4.0 4.0;
+    -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; 
+    -fx-opacity: 0.9;*/
+}
+
+.button1:hover{
+    -fx-background-radius: 30 30 30 30;
+    -fx-translate-x: 8;
+}
+
+.button1{
+    -fx-background-color:  #dea42e;
+    -fx-background-radius: 30 30 30 30 
+}
+.button1:pressed { 
+    -fx-background-color: #572512;
+}
+
+.tabla {     
+    -fx-padding: 0.5em 0.5em 0.1em 0.3em;
+    -fx-border-color: -fx-box-border -fx-box-border transparent transparent;  
+    -fx-font: 13px "Segoe UI";    
+    -fx-border-insets: 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: white;    
+    -fx-size: 20;
+    -fx-border-color: -fx-box-border;
+    -fx-border-width: 0 1 1 0;
+    -fx-border-insets: 0;
+}
+
+.table-view .show-hide-columns-button {
+    -fx-background-color: white;
+    -fx-border-color: -fx-box-border;
+    -fx-border-insets: 0;
+}
+
+.table-cell:hover {
+    -fx-background-color:  #f6cd96;
+}
+ 
+.table-row-cell:empty, .table-cell:empty:hover {
+    -fx-background-color: whitesmoke;
+}
+ 
+/*
+.imageView:pressed{
+    -fx-effect: dropshadow( gaussian, blue, 1, 1, 0, 0);
+}
+*/
+.imageView:pressed{
+    -fx-effect: dropshadow(gaussian,#f6cd96, 10, 1, 0, 0 );
+    opacity: 20;
+}
+
+.text-field{
+    -fx-text-fill:black;
+}
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 5 5 5 5;
+}
+
+.combo-box .combo-box-popup .list-cell:hover {
+  -fx-text-fill: white ;
+  -fx-background-color:  #f8ca80 ;
+}

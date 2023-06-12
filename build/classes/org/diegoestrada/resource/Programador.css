@@ -1,0 +1,7 @@
+.backgroundColor{
+    -fx-background-color: linear-gradient(to left, #dea42e ,#c84e28   );
+}
+.imageView:pressed{
+    -fx-effect: dropshadow(gaussian,#f6cd96, 10, 1, 0, 0 );
+    opacity: 20;
+}

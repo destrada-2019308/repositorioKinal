@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1166.0" styleClass="backgroundColor" stylesheets="@../resource/Programador.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegoestrada.controller.ProgramadorController">
+   <children>
+      <ImageView fitHeight="307.0" fitWidth="299.0" layoutX="722.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Foto.jpeg" />
+         </image></ImageView>
+      <Label cache="true" layoutX="78.0" layoutY="89.0" prefHeight="51.0" prefWidth="370.0" text="Datos Personales:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label cache="true" layoutX="79.0" layoutY="138.0" prefHeight="46.0" prefWidth="499.0" text="Nombre: Diego René Estrada Juárez" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label cache="true" layoutX="78.0" layoutY="184.0" prefHeight="46.0" prefWidth="466.0" text="Código Técnico: IN5AM " textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label cache="true" contentDisplay="CENTER" layoutX="78.0" layoutY="230.0" prefHeight="46.0" prefWidth="299.0" text="Carné: 2019308" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label cache="true" layoutX="78.0" layoutY="276.0" prefHeight="46.0" prefWidth="544.0" text="Correo: destrada-2019308@kinal.edu.gt" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Line cache="true" endX="197.60003662109375" layoutX="180.0" layoutY="138.0" startX="-100.0" stroke="WHITE" />
+      <Label cache="true" layoutX="78.0" layoutY="322.0" prefHeight="46.0" prefWidth="536.0" text="Centro Educativo Técnico Laboral Kinal" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
+         <image>
+            <Image url="@../image/flechaatras.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

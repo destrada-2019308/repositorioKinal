@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="750.0" prefWidth="1280.0" style="-fx-background-color: #eee2cb;" stylesheets="@../resource/TonysKinal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegoestrada.controller.PlatoController">
+   <children>
+      <AnchorPane layoutX="-7.0" prefHeight="750.0" prefWidth="391.0" style="-fx-background-color: #f8ca80;">
+         <children>
+            <Pane layoutX="80.0" layoutY="14.0" prefHeight="203.0" prefWidth="230.0" style="-fx-background-color: #c84e28; -fx-background-radius: 100 100 10 10;">
+               <children>
+                  <ImageView fitHeight="142.0" fitWidth="134.0" layoutX="48.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/sandwich.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="87.0" layoutY="23.0" text="Plato" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox layoutX="39.0" layoutY="244.0" prefHeight="421.0" prefWidth="316.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="TOP_CENTER" cache="true" graphicTextGap="20.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#nuevo" prefHeight="72.0" prefWidth="322.0" styleClass="button1" text="Nuevo" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" accessibleRole="BUTTON" blendMode="SRC_ATOP" fitHeight="70.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/agregar-archivo.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="SW_RESIZE" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Line endX="209.58578491210938" endY="16.185762405395508" startX="-100.0" stroke="#f8ca80" strokeType="OUTSIDE" strokeWidth="2.0" style="-fx-blend-mode: #eee2cb;" />
+                  <Button fx:id="btnEliminar" alignment="TOP_CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="56.0" prefWidth="315.0" styleClass="button1" text="Eliminar" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" accessibleRole="BUTTON" blendMode="SRC_ATOP" fitHeight="70.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/boton-eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Line endX="140.0928955078125" endY="16.185762405395508" startX="-100.0" stroke="#f8ca80" strokeType="OUTSIDE" strokeWidth="2.0" style="-fx-blend-mode: #eee2cb;" />
+                  <Button fx:id="btnEditar" alignment="TOP_CENTER" graphicTextGap="15.0" mnemonicParsing="false" onAction="#editar" prefHeight="56.0" prefWidth="313.0" styleClass="button1" text="Editar" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="70.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/editar.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Line endX="140.0928955078125" endY="16.185762405395508" startX="-100.0" stroke="#f8ca80" strokeType="OUTSIDE" strokeWidth="2.0" style="-fx-blend-mode: #eee2cb;" />
+                  <Button fx:id="btnReporte" alignment="TOP_CENTER" graphicTextGap="0.0" layoutX="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#reporte" prefHeight="56.0" prefWidth="312.0" snapToPixel="false" styleClass="button1" text="Reporte" textAlignment="JUSTIFY" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="70.0" fitWidth="94.0" layoutX="-110.0" pickOnBounds="true" preserveRatio="true" x="200.0">
+                           <image>
+                              <Image url="@../image/reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView cache="true" fitHeight="39.0" fitWidth="42.0" layoutX="22.0" layoutY="12.0" onMouseClicked="#ventanaTipoPlato" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
+               <image>
+                  <Image url="@../image/flechaatras.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <HBox layoutX="-36.0" layoutY="127.0" prefHeight="100.0" prefWidth="200.0" />
+            <ImageView fitHeight="71.0" fitWidth="95.0" layoutX="68.0" layoutY="670.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Menu.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="384.0" layoutY="64.0" prefHeight="166.0" prefWidth="898.0" style="-fx-background-color: #f6cd96;">
+         <children>
+            <Label layoutX="14.0" layoutY="25.0" prefHeight="23.0" prefWidth="423.0" text="Administración/Control/Coder" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFecha" ellipsisString="" layoutX="24.0" layoutY="56.0" prefHeight="71.0" prefWidth="502.0" text="Hoy es dia de mes de año" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="387.0" layoutY="34.0" prefHeight="23.0" prefWidth="220.0" text="Fundación Kinal ">
+         <font>
+            <Font name="Arial Narrow Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="410.0" layoutY="255.0" prefHeight="100.0" prefWidth="849.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="3.0" prefWidth="163.39999999999998" />
+            <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="NEVER" maxWidth="387.20000000000005" minWidth="10.0" prefWidth="220.80002441406248" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.9999877929687" minWidth="10.0" prefWidth="228.80000000000007" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="235.20000000000005" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="36.0" prefWidth="232.0" text="Código Plato" textFill="#572512">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoPlato" editable="false" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="3.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label prefHeight="36.0" prefWidth="212.0" text=" Cantidad" textFill="#572512" GridPane.columnIndex="2">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="Nombre Plato" textFill="#572512" GridPane.rowIndex="1">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombrePlato" editable="false" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="3.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label prefHeight="36.0" prefWidth="212.0" text=" Descripción" textFill="#572512" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="3.0" />
+               </GridPane.margin>
+            </Label>
+            <ComboBox fx:id="cmbCodigoTipoPlato" prefHeight="25.0" prefWidth="206.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label prefHeight="36.0" prefWidth="232.0" text="Código Tipo Plato" textFill="#572512" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label prefHeight="36.0" prefWidth="232.0" text="Precio Plato" textFill="#572512" GridPane.rowIndex="2">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDescripcionPlato" editable="false" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="txtPrecioPlato" editable="false" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtCantidad" editable="false" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblPlatos" layoutX="421.0" layoutY="375.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="344.0" prefWidth="827.0">
+        <columns>
+          <TableColumn fx:id="colCodigoPlato" prefWidth="93.5999755859375" text="Código Plato" />
+          <TableColumn fx:id="colCantidad" prefWidth="79.20001220703125" text="Cantidad" />
+            <TableColumn fx:id="colNombrePlato" prefWidth="152.79998779296875" text="Nombre Plato" />
+            <TableColumn fx:id="colDescripcionPlato" prefWidth="242.4000244140625" text="Descripción Plato" />
+            <TableColumn fx:id="colPrecioPlato" prefWidth="127.199951171875" text="Precio Plato" />
+            <TableColumn fx:id="colCodigoTipoPlato" prefWidth="136.800048828125" text="Código Tipo Plato" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
